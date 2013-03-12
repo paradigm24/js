@@ -1,0 +1,93 @@
++<html><head><title>Hostrotation</title><br>
++<script type="text/javascript">
++function WhenI(){
++  var name= prompt("What is your first name?");
++switch(name) {
++	case "Ron":
++	i=0;
++	break;
++	case "Rafael":
++	i=1;
++	break;
++	case "Julian":
++	i=2;
++	break;
++	case "Philipp":
++	i=3;
++	break;
++	case "Rossella":
++	i=4;
++	break;
++	case "Jalil":
++	i=5;
++	break;
++	case "Javier":
++	i=6;
++	break;
++	case "Philip":
++	i=7;
++	break;
++	case "Andreas":
++	i=8;
++	break;
++	default:
++	i=false;
++	alert("I'm sorry, but I don't know that name.\nPlease enter your name with a capital letter at start");
++	break;
++}
++var firstday = new Date (2012,11,17);
++var a=1;
++var rotationday = new Date(firstday.getTime()+i*7*24*60*60*1000);
++
++heute = new Date();
++while(heute > rotationday) {
++	rotationday = new Date(firstday.getTime()+(i+(a*9))*7*24*60*60*1000);
++	a++
++}
++d = rotationday.getDate(),
++m = rotationday.getMonth()+1,
++y = rotationday.getFullYear();
++if (i === false)
++{
++	//
++}
++else 
++{
++alert("You have to organize next time at the "+d+"."+m+"."+y);
++}}
++</script>
++</head><body>
++<button name="When I" onClick="WhenI();">When do I have to organize next?</button><br>
++<br>
++
++<script type="text/javascript">
++var host = ["Ron","Rafael","Julian","Philipp B", "Rossella", "Jalil", "Javier", "Philip H", "Andreas"];
++var firstday = new Date (2013,1,18);
++
++//first rotation
++document.write("<b>First rotation</b>"+"<br>")
++for (var i = 0; i < 9; i++) {
++rotationday = new Date (firstday.getTime()+i*7*24*60*60*1000);
++d = rotationday.getDate(),
++m = rotationday.getMonth()+1,
++y = rotationday.getFullYear();
++text = (host[i]+" "+d+"."+m+"."+y+"<br>");
++document.write(text)}
++document.write("<br>");
++
++//second rotation
++document.write("<b>Second rotation</b>"+"<br>");
++var secondday = new Date(2013,3,22);
++for (var i = 0; i < 9; i++) {
++rotationday = new Date (secondday.getTime()+i*7*24*60*60*1000);
++d = rotationday.getDate(),
++m = rotationday.getMonth()+1,
++y = rotationday.getFullYear();
++text = (host[i]+" "+d+"."+m+"."+y+"<br>");
++document.write(text)}
++</script>
++<br>
++</body>
++</html>
++
++
